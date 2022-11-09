@@ -9,6 +9,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use('/', router);
 
+const multer = require('multer');
+const path = require('path');
+
+  
 async function run() {
     try{
         app.listen(process.env.port, ()=>{
